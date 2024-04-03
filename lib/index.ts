@@ -29,7 +29,7 @@ export default class Machini {
 						return;
 					}
 
-					const output = stdout.split('\r\n')?.[0] || '';
+					const output = (platformName === 'win32') ? stdout : (stdout.split('\r\n')?.[0] || '');
 
 					if (extractRegex) {
 						const extractOutput = extractRegex.exec(output)?.[1];
