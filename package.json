@@ -1,6 +1,6 @@
 {
 	"name": "machini",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Get hardware specs, Machine ID(Device ID/UUID) information, and more for your current device. It's designed to be fast and lightweight so you can get just the information you need.",
 	"author": "Jooy2 <jooy2.contact@gmail.com>",
 	"license": "MIT",
@@ -56,17 +56,17 @@
 	],
 	"devDependencies": {
 		"@types/mocha": "^10.0.6",
-		"@types/node": "^20.11.21",
-		"@typescript-eslint/eslint-plugin": "^7.1.0",
-		"@typescript-eslint/parser": "^7.1.0",
+		"@types/node": "^20.12.3",
+		"@typescript-eslint/eslint-plugin": "^7.5.0",
+		"@typescript-eslint/parser": "^7.5.0",
 		"eslint": "^8.57.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-import": "^2.29.1",
-		"mocha": "^10.3.0",
+		"mocha": "^10.4.0",
 		"prettier": "^3.2.5",
-		"terser": "^5.28.1",
+		"terser": "^5.30.2",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.3.3"
+		"typescript": "^5.4.3"
 	}
 }

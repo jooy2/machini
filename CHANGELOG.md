@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.1 (2024-04-03)
+
+- `machineId`: Fix bug on Windows
+
 ## 1.0.0 (2024-04-03)
 
-- Initial release
+- Initial release. Do not use for production.
