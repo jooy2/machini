@@ -20,7 +20,7 @@ describe('Module Test', () => {
 				regex = /[0-9a-zA-Z]{8}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{12}/;
 				break;
 			default:
-				regex = /[0-9A-Z]{32}/;
+				regex = /[0-9a-zA-Z]{32}/;
 				break;
 		}
 
