@@ -1,0 +1,72 @@
+{
+	"name": "machini",
+	"version": "1.0.0",
+	"description": "Get hardware specs, Machine ID(Device ID/UUID) information, and more for your current device. It's designed to be fast and lightweight so you can get just the information you need.",
+	"author": "Jooy2 <jooy2.contact@gmail.com>",
+	"license": "MIT",
+	"homepage": "https://jooy2.com",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jooy2/machini.git"
+	},
+	"bugs": {
+		"url": "https://github.com/jooy2/machini/issues"
+	},
+	"type": "module",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "npm run format:fix && tsc --project tsconfig.prod.json && npm run minify",
+		"test": "npm run build && mocha test/**/*.spec.ts -r ts-node/register --loader=ts-node/esm --timeout 10000",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix .",
+		"minify": "terser dist/index.js --config-file .terserrc -o dist/index.js",
+		"prepare": "npm run build",
+		"format": "prettier .",
+		"format:fix": "prettier . --write"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"main": "dist/index.js",
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"typesVersions": {
+		"*": {
+			"index.d.ts": [
+				"dist/index.d.ts"
+			]
+		}
+	},
+	"keywords": [
+		"device",
+		"hardware",
+		"uuid",
+		"machine id",
+		"machineid",
+		"mhid",
+		"uniqueid",
+		"hardware id",
+		"system id",
+		"system",
+		"sysinfo",
+		"util",
+		"utility",
+		"tool"
+	],
+	"devDependencies": {
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^20.11.21",
+		"@typescript-eslint/eslint-plugin": "^7.1.0",
+		"@typescript-eslint/parser": "^7.1.0",
+		"eslint": "^8.57.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"mocha": "^10.3.0",
+		"prettier": "^3.2.5",
+		"terser": "^5.28.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3"
+	}
+}
