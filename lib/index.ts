@@ -5,14 +5,13 @@ export default class Machini {
 		return new Promise((resolve, reject) => {
 			const platformName = process.platform;
 			let execCommands = '';
-			let extractRegex: RegExp | null;
 
 			if (platformName === 'win32') {
-				execCommands = 'REG QUERY HKLM\\SOFTWARE\\Microsoft\\Cryptography /v MachineGuid';
-				extractRegex = /MachineGuid\s+REG_SZ\s+(.*)/;
+				execCommands =
+					'for /f "tokens=3 delims= " %i in (\'REG QUERY HKLM\\SOFTWARE\\Microsoft\\Cryptography /v MachineGuid ^| findstr MachineGuid\') do @echo %i';
 			} else if (platformName === 'darwin') {
-				execCommands = "ioreg -rd1 -c IOPlatformExpertDevice | awk '/IOPlatformUUID/'";
-				extractRegex = /"IOPlatformUUID"\s=\s"(.*?)"/;
+				execCommands =
+					"ioreg -rd1 -c IOPlatformExpertDevice | awk '/IOPlatformUUID/' | cut -d '\"' -f4";
 			} else if (platformName === 'freebsd') {
 				execCommands = 'kenv -q smbios.system.uuid || sysctl -n kern.hostuuid';
 			} else {
@@ -30,18 +29,6 @@ export default class Machini {
 					}
 
 					const output = platformName === 'win32' ? stdout : stdout.split('\r\n')?.[0] || '';
-
-					if (extractRegex) {
-						const extractOutput = extractRegex.exec(output)?.[1];
-
-						if (extractOutput) {
-							resolve(extractOutput);
-						} else {
-							reject(new Error(`Failed to get machine id`));
-						}
-
-						return;
-					}
 
 					if (output) {
 						resolve(output);
