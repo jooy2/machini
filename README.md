@@ -58,7 +58,6 @@ The UUID may change when the system is reinstalled or as the virtual machine's e
 
 This method returns the same value for every user on the system.
 
-
 ```javascript
 console.log(await machineId()); // a642d9e1-6063-4da7-8ea8-2298f989d01d
 ```

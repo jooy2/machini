@@ -1,9 +1,10 @@
+import { platform } from 'os';
 import { exec as processExec } from 'child_process';
 
 export default class Machini {
 	static machineId(): Promise<string> {
 		return new Promise((resolve, reject) => {
-			const platformName = process.platform;
+			const platformName = platform();
 			let execCommands = '';
 
 			if (platformName === 'win32') {
