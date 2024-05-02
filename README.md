@@ -6,8 +6,8 @@
 
 - Lightweight, zero-dependency, super-fast!
 - You don't need system privileges to get the value.
-- Friendly to modern Node.js development and TypeScript.
-- Cross-platform (Windows, macOS, Linux) support.
+- Friendly to modern **Node.js** development and [**TypeScript**](https://www.typescriptlang.org).
+- Cross-platform (Windows, macOS, Unix/Linux) support.
 
 ## Installation
 
@@ -52,9 +52,12 @@ async function main() {
 
 ### `machineId (Promise<string>)`
 
-Gets the unique UUID of the current device. Returns an error if it fails to get a value. Returns a `Promise` object, so use `await` or `.then()` to wait for the operation to complete and get the correct value.
+Gets the unique UUID of the current device. Throws an error if the value is not retrieved. Returns a `Promise` object, so use `await` or `.then()` to wait for the operation to complete and get the correct value.
 
 The UUID may change when the system is reinstalled or as the virtual machine's environment changes. On some systems, this value can also be modified by the system administrator (but this is rarely utilized as the system may become unstable after modification).
+
+This method returns the same value for every user on the system.
+
 
 ```javascript
 console.log(await machineId()); // a642d9e1-6063-4da7-8ea8-2298f989d01d
