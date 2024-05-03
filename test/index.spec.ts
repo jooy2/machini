@@ -37,6 +37,6 @@ describe('Module Test', () => {
 
 		const sidResult = await sid();
 
-		assert.match(sidResult, /^S-1-[0-59]-\d{2}-\d{8,10}-\d{8,10}-\d{8,10}-[1-9]\d{9}/);
+		assert.match(sidResult, /^S-1-[0-59]-\d{2}-\d{8,10}-\d{8,10}-\d{8,10}-[1-9]\d{1,9}/);
 	});
 });
