@@ -11,6 +11,7 @@ on:
       - '!CHANGELOG.md'
       - '!.github/**'
       - '!.vscode/**'
+      - '.github/workflows/app-test.yml'
   # trigger deployment manually
   workflow_dispatch:
 

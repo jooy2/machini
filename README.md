@@ -4,7 +4,8 @@
 
 `machini` is a utility to get hardware information about system devices.
 
-- Lightweight, zero-dependency, super-fast!
+- Lightweight and Fast!
+- It doesn't use any additional modules - it utilizes pure NodeJS APIs.
 - You don't need system privileges to get the value.
 - Friendly to modern **Node.js** development and [**TypeScript**](https://www.typescriptlang.org).
 - Cross-platform (Windows, macOS, Unix/Linux) support.
