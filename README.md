@@ -63,6 +63,20 @@ This method returns the same value for every user on the system.
 console.log(await machineId()); // a642d9e1-6063-4da7-8ea8-2298f989d01d
 ```
 
+### `sid (Promise<string>)`
+
+Gets the Secutify Identifier (SID) value for the current user on the device. Throws an error if the value is not obtained.
+
+The SID value is only supported on Windows and macOS. Other OSes throw an error.
+
+Also, the SID value used on macOS is a value created for the directory service. If you don't trust this value, use the `machineId` method instead.
+
+This value can be changed by the user.
+
+```javascript
+console.log(await sid()); // S-1-5-21-406418252-5582013529-1321253100-2001
+```
+
 ## Contribute
 
 You can report issues on [GitHub Issue Tracker](https://github.com/jooy2/machini/issues). You can also request a pull to fix bugs and add frequently used features.
