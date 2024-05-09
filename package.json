@@ -1,6 +1,6 @@
 {
 	"name": "machini",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Get hardware specs, Machine ID(Device ID/UUID) information, and more for your current device. It's designed to be fast and lightweight so you can get just the information you need.",
 	"author": "Jooy2 <jooy2.contact@gmail.com>",
 	"license": "MIT",

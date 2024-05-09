@@ -1,6 +1,6 @@
 # Change Log
 
-## 1.0.2 (2024-05-)
+## 1.0.2 (2024-05-09)
 
 - feat: add `sid` method
 
