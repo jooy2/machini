@@ -5,12 +5,16 @@
 `machini` is a utility to get hardware information about system devices.
 
 - Lightweight and Fast!
-- It doesn't use any additional modules - it utilizes pure NodeJS APIs.
+- It doesn't use any additional modules - it utilizes pure Node.js APIs.
 - You don't need system privileges to get the value.
 - Friendly to modern **Node.js** development and [**TypeScript**](https://www.typescriptlang.org).
 - Cross-platform (Windows, macOS, Unix/Linux) support.
 
 ## Installation
+
+> [!NOTE]
+>
+> `machini` is a module that runs on the Node.js runtime and is not available in a typical web environment (client). Since it utilizes the runtime of Node.js to get device information, it defeats the purpose of getting the end user's device information. To get the client's device ID, consider a solution like UUID (`randomUUID` in `crypto`).
 
 `machini` requires `Node.js 18.x` or higher, and the repository is serviced through **[NPM](https://npmjs.com)**.
 
