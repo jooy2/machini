@@ -1,4 +1,5 @@
 import assert from 'assert';
+import { describe, it } from 'node:test';
 import { machineId, sid } from '../dist';
 
 describe('Module Test', () => {
