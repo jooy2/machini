@@ -81,10 +81,10 @@ This value can be changed by the user.
 console.log(await sid()); // S-1-5-21-406418252-5582013529-1321253100-2001
 ```
 
-## Contribute
+## Contributing
 
-You can report issues on [GitHub Issue Tracker](https://github.com/jooy2/machini/issues). You can also request a pull to fix bugs and add frequently used features.
+Anyone can contribute to the project by reporting new issues or submitting a pull request. For more information, please see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-Copyright © 2024 [Jooy2](https://jooy2.com) <[jooy2.contact@gmail.com](mailto:jooy2.contact@gmail.com)> Released under the MIT license.
+Please see the [LICENSE](LICENSE) file for more information about project owners, usage rights, and more.
