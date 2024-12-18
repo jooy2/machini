@@ -13,10 +13,12 @@ lib/
 test/
 CHANGELOG.md
 CODE_OF_CONDUCT.md
+SECURITY.md
+CONTRIBUTING.md
 
 # For development
 .git/
-.terserrc
+terser.config.json
 .eslintignore
 .eslintrc.json
 .prettierignore
