@@ -1,6 +1,6 @@
 # machini
 
-> [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/machini/blob/master/LICENSE) ![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/machini) ![Commit Count](https://img.shields.io/github/commit-activity/y/jooy2/machini) [![npm downloads](https://img.shields.io/npm/dm/machini.svg)](https://www.npmjs.com/package/machini) [![npm latest package](https://img.shields.io/npm/v/machini/latest.svg)](https://www.npmjs.com/package/machini) ![minified size](https://img.shields.io/bundlephobia/min/machini) ![github repo size](https://img.shields.io/github/repo-size/jooy2/machini) [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2) ![Stars](https://img.shields.io/github/stars/jooy2/machini?style=social)
+> [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jooy2/machini/blob/main/LICENSE) ![Programming Language Usage](https://img.shields.io/github/languages/top/jooy2/machini) ![Commit Count](https://img.shields.io/github/commit-activity/y/jooy2/machini) [![npm downloads](https://img.shields.io/npm/dm/machini.svg)](https://www.npmjs.com/package/machini) [![npm latest package](https://img.shields.io/npm/v/machini/latest.svg)](https://www.npmjs.com/package/machini) ![minified size](https://img.shields.io/bundlephobia/min/machini) ![github repo size](https://img.shields.io/github/repo-size/jooy2/machini) [![Followers](https://img.shields.io/github/followers/jooy2?style=social)](https://github.com/jooy2) ![Stars](https://img.shields.io/github/stars/jooy2/machini?style=social)
 
 `machini` is a utility to get hardware information about system devices.
 
@@ -33,23 +33,11 @@ $ yarn add machini
 $ pnpm install machini
 ```
 
-### Using named import (Multiple utilities in a single require) - Recommend
-
 ```javascript
 import { machineId } from 'machini';
 
 async function main() {
 	console.log(await machineId());
-}
-```
-
-### Using whole class (multiple utilities simultaneously with one object)
-
-```javascript
-import Machini from 'machini';
-
-async function main() {
-	console.log(await Machini.machineId());
 }
 ```
 
